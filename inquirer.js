@@ -8,12 +8,26 @@ let questions = [
         name:'size',
         message:'What size pizza do you want?',
         default:'medium',
-        message:'what toppings would you like?'
-    }
+        
+    },
     {
-        name: //start over the same way here.
-    }
+        name:'Toppings',
+        message:'What toppings do you desire?',
+        default:'Extra Cheddar!',
+    },
+    {
+        name:'Extras',
+        message:'Would you like anything else?',
+        default:'Breadsticks',
+    },
+
 ]
-inquirer.prompt(questions).then(function (answers) {
-    console.log(answers)
+inquirer.prompt(questions).then(function ({size, Toppings, Extras}) {
+
+    console.log(chalk.yellow("Your Order: " + "\n" + size + "Pizza" + "\n" + "with " + Toppings + "\n" + "Plus " + Extras))
+    inquirer.prompt([{
+        name:'Order',
+        message:'is this correct?',
+        type: 'confirm',
+    }]).then(function({Order}))
 });
