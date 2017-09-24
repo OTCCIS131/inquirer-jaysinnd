@@ -2,7 +2,7 @@ const inquirer = require('inquirer')
 const chalk = require('chalk')
 const confirm = require('inquirer-confirm')
 
-console.log('My Below Average Pizza Company')
+console.log(chalk.blue('My Below Average Pizza Company'))
 
 let questions = [
     {
